@@ -40,6 +40,30 @@ QJUMP is a simple and immediately deployable approach to controlling network int
 networks. Network interference occurs when congestion from throughput-intensive applications causes queueing
 that delays traffic from latency-sensitive applications. To mitigate network interference, QJUMP applies Internet QoS-inspired techniques to datacenter applications. Each application is assigned to a latency sensitivity level (or class). Packets from higher levels are rate-limited in the end host, but once allowed into the network can “jump-the-queue” over packets from lower levels. In settings with known node counts and link speeds, QJUMP can support service levels ranging from strictly bounded latency (but with low rate) through to line-rate throughput (but with high latency variance). We have implemented QJUMP as a Linux Traffic Control module. We show that QJUMP achieves bounded latency and reduces in-network interference by up to 300×, outperforming Ethernet Flow Control (802.3x), ECN (WRED) and DCTCP. We also show that QJUMP improves average flow completion times, performing close to or better than DCTCP and pFabric.
 
++ what is the problem they want to solve? is it important? 
+  **Queueing delay is the reason of delay jitter in datacenter.
+
++ how was the problem attempted before? why are those efforts not 
+sufficient (in a particular situation)? does their argument make sense? 
+(related work) what is the impact of this paper? (scholar.google.com)
+  **No related work find in this paper
+
+
++ what is their new idea? based on what assumptions and why are they 
+(not/still) reasonable? (system model, new scheme, etc)
+  **QJUMP users must choose between low latency variance at low throughput (high priority) and high latency variance at high throughput (low priority).
+
++ why is this idea better? any proof or performance study to support? 
+is the performance study (proof, simulation, emulation, experimentation, etc) 
+reasonable and reproducible? is the data input reliable? is the assessment 
+process logic? is the result improved due to their idea or something else? 
+
++ what did they not consider? why? (discussion, future work, etc) 
+
++ did they miss something else?! 
+
++ do you have something (scheme, approach, etc) even better?! 
+
 
 ## 2005' Decentralized, Adaptive Resource Allocation for Sensor Networks
 This paper addresses the problem of resource allocation in sensor networks. We are concerned with how to allocate limited energy, radio bandwidth, and other resources to maximize the value of each node’s contribution to the network. Sensor networks present a novel resource allocation challenge: given extremely limited resources, varying node capabilities, and changing network conditions, how can one achieve efficient global behavior? Currently, this is accomplished by carefully tuning the behavior of the lowlevel sensor program to accomplish some global task, such as distributed event detection or in-network data aggregation. This manual tuning is difficult, error-prone, and typically does not consider network dynamics such as energy depletion caused by bursty communication patterns. We present Self-Organizing Resource Allocation (SORA), a new approach for achieving efficient resource allocation in sensor networks. Rather than manually tuning sensor resource usage, SORA defines a virtual market in which nodes sell goods (such as sensor readings or data aggregates) in response to prices that are established by the programmer. Nodes take actions to maximize their profit, subject to energy budget constraints. Nodes individually adapt their operation over time in response to feedback from payments, using reinforcement learning. The behavior of the network is determined by the price for each good, rather than by directly specifying local node programs. SORA provides a useful set of primitives for controlling the aggregate behavior of sensor networks despite variance of individual nodes. We present the SORA paradigm and a sensor network vehicle tracking application based on this design, as well as an extensive evaluation demonstrating that SORA realizes an efficient allocation of network resources that adapts to changing network conditions.
