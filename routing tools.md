@@ -16,3 +16,26 @@ The Quagga architecture consists of a core daemon, zebra, which acts as an abstr
 Quagga daemons are each configurable via a network accessible CLI (called a 'vty'). The CLI follows a style similar to that of other routing software. There is an additional tool included with Quagga called 'vtysh', which acts as a single cohesive front-end to all the daemons, allowing one to administer nearly all aspects of the various Quagga daemons in one place.
 
 Please see the Documentation for further detailed information. Community support is also available via the mailling lists.
+
+## Bird Internet Routing Daemon
+https://bird.network.cz/
+
+The BIRD project aims to develop a fully functional dynamic IP routing daemon primarily targeted on (but not limited to) Linux, FreeBSD and other UNIX-like systems and distributed under the GNU General Public License.
+
+What do we support:
+
+Both IPv4 and IPv6
+Multiple routing tables
+BGP
+RIP
+OSPF
+BFD
+Babel
+Static routes
+IPv6 Router Advertisements
+Inter-table protocol
+Command-line interface (using the `birdc' client; to get some help, just press `?')
+Powerful language for route filtering
+Linux, FreeBSD, NetBSD, OpenBSD ports
+
+**There already exist other such routing daemons: routed (RIP only), GateD (non-free), Zebra and MRTD, but their capabilities are limited and they are relatively hard to configure and maintain.**
